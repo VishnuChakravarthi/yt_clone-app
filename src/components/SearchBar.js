@@ -1,7 +1,7 @@
 import React from "react";
 
 class SearchBar extends React.Component {
-  state = { term: "" };
+  state = { term: "cars" };
 
   onInputChange = (event) => {
     this.setState({ term: event.target.value });
@@ -15,7 +15,7 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <div className="ui container">
+      <div className="ui container searchbar">
         <form className="ui form" onSubmit={this.formOnSubmit}>
           <div className="field">
             <label>Search Video</label>

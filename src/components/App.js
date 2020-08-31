@@ -1,4 +1,5 @@
 import React from "react";
+import "../css/videoItem.css";
 import SearchBar from "./SearchBar";
 import VideoPlayer from "./VideoPlayer";
 import VideoList from "./VideoList";
@@ -38,11 +39,19 @@ class App extends React.Component {
     return (
       <div className="ui container">
         <SearchBar onSubmit={this.onFormSubmit} />
-        <VideoPlayer video={this.state.selectedVideo} />
-        <VideoList
-          onVideoClick={this.onVideoClick}
-          videos={this.state.videos}
-        />
+        <div className="ui grid">
+          <div className="ui row">
+            <div className="eleven wide column">
+              <VideoPlayer video={this.state.selectedVideo} />
+            </div>
+            <div className="five wide column">
+              <VideoList
+                onVideoClick={this.onVideoClick}
+                videos={this.state.videos}
+              />
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
