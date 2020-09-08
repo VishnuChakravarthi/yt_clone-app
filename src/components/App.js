@@ -5,7 +5,7 @@ import VideoPlayer from "./VideoPlayer";
 import VideoList from "./VideoList";
 import axios from "../apis/youtube";
 
-const KEY = "AIzaSyCZ1NVntAt6ji5gcKJRXQ_cE_sryEbQiAg";
+const KEY = "Your API Key";
 
 class App extends React.Component {
   state = { videos: [], selectedVideo: null };
